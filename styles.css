@@ -1,0 +1,211 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: black;
+    font-size: 3vh;
+    color: whitesmoke;
+}
+
+.header {
+    display: flex;
+    background-color: transparent;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    padding: 2vh 10%;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 3.4vh;
+    text-decoration: none;
+    font-weight: 900;
+    color: whitesmoke;
+}
+
+.navbar {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    font-size: 3vh;
+    font-weight: 900;
+    margin-left: 5vh;
+    transition: 0.3s;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.home-content span {
+    color: #0ef;
+}
+
+.toggle_btn {
+    color: #0ef;
+    cursor: pointer;
+    font-size: 2rem;
+    display: none;
+}
+
+.action_btn {
+    color: black;
+    font-size: 1.5rem;
+    font-weight: 900;
+    padding: 0.5rem 1rem;
+    background-color: #0ef;
+    border-radius: 10%;
+    cursor: pointer;
+    transition: scale 0.2 ease;
+}
+
+a {
+    text-decoration: none;
+}
+
+.action_btn:hover {
+    scale: 1.05;
+    color: black;
+}
+
+.action_btn:active {
+    scale: 0.95;
+}
+
+.home {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    padding: 0 10%;
+    background: url('./Assets/hito.jpg') no-repeat;
+    background-position: center;
+    width: 100vw;
+}
+
+.home-content {
+    max-width: 780px;
+}
+
+.home-content h1 {
+    font-size: 4.2rem;
+    font-weight: 900;
+}
+
+.home-content h3 {
+    font-size: 2.4rem;
+    font-weight: 900;
+    color: #0ef;
+}
+
+.home-content p {
+    font-size: 1.2rem;
+}
+
+.Hire {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: #0ef;
+    background-color: #081b29;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 2vh;
+    padding: 1vh;
+    border-radius: 10%;
+    border: 2px solid #0ef;
+    transition: 2s;
+}
+
+.Hire:hover {
+    background-color: #0ef;
+    color: #081b29;
+    box-shadow: 0 0 30px #0ef;
+    transform: translateY(3vh);
+}
+
+.bg {
+    display: flex;
+    position: relative;
+    height: 80vh;
+    width: 100%;
+    background-color: transparent;
+    transition: 3s;
+}
+
+.bg:hover {
+    background: black;
+    opacity: 0.8;
+}
+
+.dropdown {
+    list-style: none;
+    position: absolute;
+    right: 4rem;
+    top: 60px;
+    height: 0;
+    width: 80%;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(15px);
+    border-radius: 10%;
+    overflow: hidden;
+    transition: height .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown.open {
+    height: 400px;
+}
+
+.dropdown a {
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #fff;
+}
+
+a:hover,
+.navbar a.active {
+    color: #0ef;
+}
+
+@media (max-width:600px) 
+{
+    .navbar,
+    .action_btn {
+        display: none;
+    }
+
+    .toggle_btn {
+        display: block;
+    }
+
+    .home {
+        background: black;
+    }
+
+    .bg, .bg:hover {
+        display: none;
+    }
+
+    .dropdown {
+        display: block;
+    }
+}
+
+
+@media (min-width:601px)
+{
+    .dropdown {
+        display: none;
+    }
+}
